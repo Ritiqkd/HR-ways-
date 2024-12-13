@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Haryana Roadways</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Italiana&amp;display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f4f8;
+            margin: 0;
+        }
+
+        .header {
+            background-color: #2880cd;
+            color: white;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .title {
+            font-size: 26px;
+            font-family: 'poppins';
+            padding-left: 20px;
+            font-weight: 450;
+        }
+
+        .nav-button {
+            background: transparent;
+            color: white;
+            font-family: 'poppins';
+            font-weight: 450;
+            font-size: 16px;
+            border: none;
+            margin-left: 15px;
+            cursor: pointer;
+            transition: color 0.3s;
+        }
+
+        .nav-button:hover {
+            color: #d0d0d0;
+        }
+
+        a {
+            color: white;
+            font-family: 'poppins';
+            font-weight: 450;
+            font-size: 16px;
+            text-decoration: none;
+        }
+
+        .hero {
+            background: url('https://source.unsplash.com/1600x400/?bus') no-repeat center center/cover;
+            color: #42a7ff;
+            text-align: center;
+
+        }
+
+        .hero h1 {
+            font-size: 42px;
+            margin: 0;
+            padding-top: 40px;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            font-weight: 600;
+        }
+
+        .hero p {
+            font-size: 20px;
+            margin: 10px 0;
+        }
+
+        .cta-button {
+            margin-top: 30px;
+            background-color: #478efa;
+            color: rgb(255, 255, 255);
+            border: none;
+            padding: 15px 25px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+
+        .cta-button:hover {
+            background-color: #1548ff;
+            transform: translateY(-2px);
+        }
+
+        .container {
+            padding: 20px;
+        }
+
+        .service-highlights {
+            display: flex;
+            justify-content: space-around;
+            margin: 40px 0;
+            height: 150px;
+        }
+
+        .service {
+            background-color: white;
+            padding: 30px;
+            border-radius: 5px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            width: 30%;
+            text-align: center;
+        }
+
+        .service i {
+            font-size: 40px;
+            color: #2880cd;
+        }
+
+        .testimonials {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            margin: 40px 0;
+        }
+
+        .testimonial {
+            margin: 10px 0;
+            font-style: italic;
+        }
+
+        .footer {
+            background-color: #2880cd;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        .footer a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        .tabs {
+            display: flex;
+            margin-bottom: 20px;
+            margin-left: 90px;
+        }
+
+        .tab {
+            background-color: #ffffff;
+            padding: 10px 20px;
+            margin-right: 5px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s, transform 0.2s;
+            display: flex;
+            align-items: center;
+            margin-left: 100px;
+            font-size: 16px;
+        }
+
+        .tab:hover {
+            background-color: #d0d0d0;
+            transform: translateY(-2px);
+        }
+
+        .tab i {
+            margin-right: 5px;
+        }
+
+        .tab-content {
+            background-color: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .action-button {
+            background-color: #2880cd;
+            color: white;
+            border: none;
+            padding: 15px 25px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s, transform 0.2s;
+            width: 500px;
+            font-size: 20px;
+            font-family: 'poppins';
+            font-weight: 350;
+        }
+
+        .action-button:hover {
+            background-color: #2880cd;
+            transform: translateY(-2px);
+        }
+
+        .map {
+            background-color: #e0e0e0;
+            height: 450px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 10px;
+            border-radius: 5px;
+        }
+
+        .scanner {
+            background-color: #e0e0e0;
+            height: 150px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 10px;
+            border-radius: 5px;
+        }
+
+        label {
+            display: block;
+            margin-top: 10px;
+            margin-bottom: 5px;
+        }
+
+        select,
+        input,
+        textarea {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        textarea {
+            height: 100px;
+            resize: none;
+        }
+
+        .image {
+            margin-top: 50px;
+        }
+
+        .color {
+            color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <h1 class="title">HR ways</h1>
+        <nav>
+            <button class="nav-button"><a href="H3a.html">Home</a></button>
+            
+            <button class="nav-button"><a href="#"></a>About Us</button>
+            <button class="nav-button"><a href="#"></a>Contact</button>
+        </nav>
+    </header>
+    <center>
+        <div class="image">
+            <img src="hrways.jpeg" alt width="1200px" height="500px">
+        </div>
+    </center>
+
+
+    <section class="hero">
+        <h1><span class="color">Welcome to </span>HR ways</h1>
+        <p>Your journey begins here. Convenient and reliable bus services for everyone.</p>
+        <button class="cta-button" style="font-size: 15px;">Book Your Trip</button>
+    </section>
+
+    <main class="container">
+        <div class="service-highlights">
+            <div class="service">
+                <i class="fas fa-bus"></i>
+                <h3 style="margin-top: 10px;">Booking Bus History</h3>
+                <p style="margin-top: 7px;">Easy to access your booking History</p>
+            </div>
+            <div class="service">
+                <i class="fas fa-map-marker-alt"></i>
+                <h3 style="margin-top: 10px;">Helpline no.</h3>
+                <p style="margin-top: 7px;">Any kind of you need from our side contact us at this no. 0000
+                </p>
+            </div>
+            <div class="service">
+                <i class="fas fa-credit-card"></i>
+                <h3 style="margin-top: 10px;">Payment History</h3>
+                <p style="margin-top: 7px;">Easy to access your payment history </p>
+            </div>
+        </div>
+        <br><br>
+
+        <div class="tabs">
+            <button class="tab" data-tab="book"><i class="fas fa-bus"></i> Book Bus</button>
+            <button class="tab" data-tab="track"><i class="fas fa-map-marker-alt"></i> Track Bus</button>
+            <button class="tab" data-tab="pay"><i class="fas fa-credit-card"></i> Scan and Pay</button>
+            <button class="tab" data-tab="complaint"><i class="fas fa-exclamation-circle"></i> Complaint</button>
+            <button class="tab" data-tab="info"><i class="fas fa-info-circle"></i> Bus Info</button>
+        </div>
+        <br><br>
+        <center>
+            <div class="tab-content" id="book" style="background-color: rgb(38, 39, 42);">
+                <h2 style="color: white; font-family: 'poppins';
+            font-weight: 450; font-size: 30px;">Book Your Bus</h2>
+                <label for="from" style="color: white; font-family: 'poppins';
+            font-weight: 450;">From</label>
+                <select id="from" style="width: 500px;">
+                    <option value="" disabled selected>Select origin</option>
+                    <option value="Panipat">Panipat</option>
+                    <option value="Sonipat">Sonipat</option>
+                    <option value="Karnal">Karnal</option>
+                    <option value="Jind">Jind</option>
+                    <option value="Rhotak">Rhotak</option>
+                    <option value="Kurukshetra">Kurukshetra</option>
+                    <option value="Ambala">Ambala</option>
+                    <option value="Panchkula">Panchkula</option>
+                    <option value="Yamunanagar">Yamunanagar</option>
+                    <option value="Hisar">Hisar</option>
+                    <option value="Sirsa">Sirsa</option>
+                    <option value="Mahendragarh">Mahendragarh</option>
+                    <option value="Nuh">Nuh</option>
+                    <option value="Bhiwani">Bhiwani</option>
+                    <option value="Rewari">Rewari</option>
+                    <option value="Faridabad">Faridabad</option>
+                    <option value="Gurugram">Gurugram</option>
+                    <option value="Charkhi Dadri">Charkhi Dadri</option>
+                    <option value="Fatehabad">Fatehabad</option>
+                    <option value="Jhajjar">Jhajjar</option>
+                    <option value="Kaithal">Kaithal</option>
+                </select>
+                <label for="to" style="color: white; font-family: 'poppins';
+            font-weight: 450;">To</label>
+                <select id="to" style="width: 500px; font-family: 'poppins';
+            font-weight: 450;">
+                    <option value="" disabled selected>Select destination</option>
+                    <option value="Panipat">Panipat</option>
+                    <option value="Sonipat">Sonipat</option>
+                    <option value="Karnal">Karnal</option>
+                    <option value="Jind">Jind</option>
+                    <option value="Rhotak">Rhotak</option>
+                    <option value="Kurukshetra">Kurukshetra</option>
+                    <option value="Ambala">Ambala</option>
+                    <option value="Panchkula">Panchkula</option>
+                    <option value="Yamunanagar">Yamunanagar</option>
+                    <option value="Hisar">Hisar</option>
+                    <option value="Sirsa">Sirsa</option>
+                    <option value="Mahendragarh">Mahendragarh</option>
+                    <option value="Nuh">Nuh</option>
+                    <option value="Bhiwani">Bhiwani</option>
+                    <option value="Rewari">Rewari</option>
+                    <option value="Faridabad">Faridabad</option>
+                    <option value="Gurugram">Gurugram</option>
+                    <option value="Charkhi Dadri">Charkhi Dadri</option>
+                    <option value="Fatehabad">Fatehabad</option>
+                    <option value="Jhajjar">Jhajjar</option>
+                    <option value="Kaithal">Kaithal</option>
+                </select>
+                <label for="date" style="color: white; font-family: 'poppins';
+            font-weight: 450;">Date of Journey</label>
+
+                <input id="date" type="date" style="width: 485px; font-family: 'poppins';
+            font-weight: 450;"><br><br>
+                <button class="action-button">Search Buses</button>
+            </div>
+        </center>
+
+
+        <div class="tab-content" id="track" style="display:none;">
+            <h2>Track Your Bus</h2>
+            <div class="map"><iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1781690.35760771!2d74.71952935407998!3d29.28632214447163!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390db00b8670400b%3A0x732eaab4aaa6c143!2sHaryana!5e0!3m2!1sen!2sin!4v1729336426272!5m2!1sen!2sin"
+                    width="1500" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+            <p>Current Location: Karnal Bus Stand</p>
+            <p>Estimated Arrival: 15 minutes</p>
+        </div>
+        <center>
+            <div class="tab-content" id="pay" style="display:none; background-color:#f0f4f8;">
+                <h2 style="font-family: 'poppins';
+            font-weight: 450; font-size: 30px;">Scan & Pay</h2><br><br>
+                <div class="scanner" style="width: 300px; height: 300px;"><img src="scanner.jpg"
+                        style="width: 300px; height: 300px;"></div><br>
+                <button id="scan-button" class="action-button">Start Scan</button>
+            </div>
+        </center>
+
+        <center>
+            <div class="tab-content" id="complaint" style="display:none; background-color: rgb(38, 39, 42);">
+                <h2 style="color: white; font-family: 'poppins';
+            font-weight: 450; font-size: 30px;">
+                    <h2 style="color: white; font-family: 'poppins';
+            font-weight: 450; font-size: 30px;">File a Complaint</h2><br>
+                    <label for="complaint-type" style="color: white; font-family: 'poppins';
+        font-weight: 450; font-size: 18px;">Complaint Type</label>
+                    <select id="complaint-type" style="width: 485px; font-family: 'poppins';
+            font-weight: 450;">
+                        <option value="" disabled selected>Select complaint type</option>
+                        <option value="delay">Bus Delay</option>
+                        <option value="cleanliness">Cleanliness Issue</option>
+                        <option value="staff">Staff Behavior</option>
+                        <option value="other">Other</option>
+                    </select>
+                    <label for="complaint-details" style="color: white; font-family: 'poppins';
+        font-weight: 450; font-size: 18px;">Complaint Details</label>
+                    <textarea id="complaint-details" style="width: 475px; font-family: 'poppins';
+            font-weight: 450;" placeholder="Please provide details of your complaint"></textarea><br><br>
+                    <button class="action-button">Submit Complaint</button>
+            </div>
+        </center>
+
+
+        <div class="tab-content" id="info" style="display:none;">
+            <h2>Bus Information</h2>
+            <p><strong>Driver:</strong> Rajesh Kumar</p>
+            <p><strong>Conductor:</strong> Amit Singh</p>
+            <p><strong>Bus Number:</strong> HR 01 AB 1234</p>
+            <p><strong>Route:</strong> Chandigarh - Delhi</p>
+            <p><strong>Type:</strong> AC Volvo</p>
+        </div>
+
+        <div class="testimonials">
+            <center>
+                <h2>What Our Customers Say</h2>
+                <p class="testimonial">"Best bus service I have ever used!" - Priya</p>
+                <p class="testimonial">"Reliable and comfortable travel." - Anil</p>
+                <p class="testimonial">"Easy booking process!" - Suman</p>
+            </center>
+
+        </div>
+    </main>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const tabs = document.querySelectorAll(".tab");
+            const tabContents = document.querySelectorAll(".tab-content");
+            const scanButton = document.getElementById("scan-button");
+
+            tabs.forEach(tab => {
+                tab.addEventListener("click", () => {
+                    const activeTab = tab.getAttribute("data-tab");
+                    tabContents.forEach(content => {
+                        content.style.display = content.id === activeTab ? "block" : "none";
+                    });
+                });
+            });
+
+            scanButton.addEventListener("click", () => {
+                scanButton.textContent = "Scanning...";
+                setTimeout(() => {
+                    alert("Payment successful!");
+                    scanButton.textContent = "Start Scan";
+                }, 2000);
+            });
+        });
+    </script>
+</body>
+
+</html>

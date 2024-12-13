@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Haryana Roadways</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Italiana&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f4f8;
+            margin: 0;
+        }
+        .header {
+            background-color: #2880cd;
+            color: white;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .title {
+            font-size: 26px;
+            font-family: 'poppins';
+            padding-left: 20px;
+            font-weight: 450;
+        }
+        .nav-button {
+            background: transparent;
+            color: white;
+            font-family: 'poppins';
+            font-weight: 450;
+            font-size: 16px;
+            border: none;
+            margin-left: 15px;
+            cursor: pointer;
+            transition: color 0.3s;
+        }
+        .nav-button:hover {
+            color: #d0d0d0;
+        }
+        .hero {
+            background: url('https://source.unsplash.com/1600x400/?bus') no-repeat center center/cover;
+            color: #42a7ff;
+            text-align: center;
+        }
+        .hero h1 {
+            font-size: 42px;
+            margin: 0;
+            padding-top: 40px;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            font-weight: 600;
+        }
+        .hero p {
+            font-size: 20px;
+            margin: 10px 0;
+        }
+        .cta-button {
+            margin-top: 30px;
+            background-color: #478efa;
+            color: rgb(255, 255, 255);
+            border: none;
+            padding: 15px 25px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+        .cta-button:hover {
+            background-color: #1548ff;
+            transform: translateY(-2px);
+        }
+        .container {
+            padding: 20px;
+        }
+        .service-highlights {
+            display: flex;
+            justify-content: space-around;
+            margin: 40px 0;
+            height: 150px;
+        }
+        .service {
+            background-color: white;
+            padding: 30px;
+            border-radius: 5px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            width: 30%;
+            text-align: center;
+        }
+        .service i {
+            font-size: 40px;
+            color: #2880cd;
+        }
+        .testimonials {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            margin: 40px 0;
+        }
+        .testimonial {
+            margin: 10px 0;
+            font-style: italic;
+        }
+        .footer {
+            background-color: #2880cd;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+        .footer a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        .tabs {
+            display: flex;
+            margin-bottom: 20px;
+            margin-left: 90px;
+        }
+        .tab {
+            background-color: #ffffff;
+            padding: 10px 20px;
+            margin-right: 5px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s, transform 0.2s;
+            display: flex;
+            align-items: center;
+            margin-left: 100px;
+            font-size: 16px;
+        }
+        .tab:hover {
+            background-color: #d0d0d0;
+            transform: translateY(-2px);
+        }
+        .tab i {
+            margin-right: 5px;
+        }
+        .tab-content {
+            background-color: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        .action-button {
+            background-color: #2880cd;
+            color: white;
+            border: none;
+            padding: 15px 25px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s, transform 0.2s;
+            width: 500px;
+            font-size: 20px;
+            font-family: 'poppins';
+            font-weight: 350;
+        }
+        .action-button:hover {
+            background-color: #2880cd;
+            transform: translateY(-2px);
+        }
+        .map {
+            background-color: #e0e0e0;
+            height: 450px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 10px;
+            border-radius: 5px;
+        }
+        .scanner {
+            background-color: #e0e0e0;
+            height: 150px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 10px;
+            border-radius: 5px;
+        }
+        label {
+            display: block;
+            margin-top: 10px;
+            margin-bottom: 5px;
+        }
+        select, input, textarea {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        textarea {
+            height: 100px;
+            resize: none;
+        }
+        .image {
+            margin-top: 50px;
+        }
+        .color {
+            color: black;
+        }
+        /* Modal styles */
+        #login-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 1000;
+        }
+        .modal-content {
+            background: white;
+            padding: 20px;
+            margin: 100px auto;
+            width: 300px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <h1 class="title">HR ways</h1>
+        <nav>
+            <button class="nav-button">Home</button>
+            <button class="nav-button">About Us</button>
+            <button class="nav-button">Contact</button>
+            <button class="nav-button" id="login-button">Login</button>
+        </nav>
+    </header>
+    <center>
+        <div class="image">
+            <img src="hrways.jpeg" alt width="1200px" height="500px">
+        </div>
+    </center>
+    <section class="hero">
+        <h1><span class="color">Welcome to </span>HR ways</h1>
+        <p>Your journey begins here. Convenient and reliable bus services for everyone.</p>
+        <button class="cta-button" style="font-size: 15px;">Book Your Trip</button>
+    </section>
+    <main class="container">
+        <div class="service-highlights">
+            <div class="service">
+                <i class="fas fa-bus"></i>
+                <h3 style="margin-top: 10px;">Book Bus</h3>
+                <p style="margin-top: 7px;">Easy online bus booking for your convenience.</p>
+            </div>
+            <div class="service">
+                <i class="fas fa-map-marker-alt"></i>
+                <h3 style="margin-top: 10px;">Track Bus</h3>
+                <p style="margin-top: 7px;">Real-time tracking of your bus.</p>
+            </div>
+            <div class="service">
+                <i class="fas fa-user-friends"></i>
+                <h3 style="margin-top: 10px;">Payment</h3>
+                <p style="margin-top: 7px;">Special discounts for group bookings.</p>
+            </div>
+        </div>
+        <div class="testimonials">
+            <h2>What our customers say:</h2>
+            <div class="testimonial">"Great service and very friendly staff!" - John D.</div>
+            <div class="testimonial">"I always feel safe traveling with HR ways." - Sarah K.</div>
+            <div class="testimonial">"Easy to book and always on time." - Mike S.</div>
+        </div>
+    </main>
+    <div class="footer">
+        <p>&copy; 2023 HR ways. All rights reserved. | <a href="#">Privacy Policy</a> | 
+            <a href="#">Terms of Service</a></p>
+    </div>
+
+   
+    <div id="login-modal">
+        <div class="modal-content">
+            <h2>Login</h2>
+            <label for="username">Username</label>
+            <input type="text" id="username">
+            <label for="password">Password</label>
+            <input type="password" id="password">
+            <button class="action-button" id="submit-login">Login</button>
+            <button class="action-button" id="close-modal" style="background-color:
+             red; margin-top:10px;">Close</button>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById("login-button").addEventListener("click", () => {
+            document.getElementById("login-modal").style.display = "block";
+        });
+
+        document.getElementById("close-modal").addEventListener("click", () => {
+            document.getElementById("login-modal").style.display = "none";
+        });
+    </script>
+</body>
+</html>
